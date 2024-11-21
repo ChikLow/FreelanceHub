@@ -24,7 +24,6 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    
 }
 
 .logo {
@@ -85,6 +84,7 @@ nav .join-btn {
 
 /* Search Banner */
 .search-banner {
+    margin-top:50px;
     background-color: #00c2a8;
     padding: 40px 20px;
     text-align: center;
@@ -121,7 +121,7 @@ nav .join-btn {
 
 /* Popular Services */
 .popular-services {
-    margin-top:100px;
+    margin-top:150px;
     padding: 20px;
     text-align: center;
 }
@@ -132,13 +132,14 @@ nav .join-btn {
 }
 
 .services {
+    transform: translateX(-20px);
     width: 100vw;
     background-color: #00c2a8;
-    display: flex;
+    display:flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    padding:40px
+    padding:40px; 
 }
 
 .service-card {
@@ -184,3 +185,6 @@ footer p {
     height: 50px; /* Adjust the size of your logo */
     width: auto;
 }
+
+/*register styles*/
+
