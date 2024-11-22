@@ -49,6 +49,16 @@ header {
     left: 50%; /* Move to the horizontal center of the header */
     transform: translateX(-50%); /* Adjust position to align the center */
 }
+
+.three-header-btns a{
+    color:rgb(51, 51, 51);
+    transition: linear 0.15s;
+}
+.three-header-btns a:hover{
+    color:#00BFAE;
+    transition: linear 0.15s;
+}
+
 nav {
     flex-grow: 1; /* Allow the nav to take up remaining space */
     display: flex;
@@ -80,6 +90,12 @@ nav .join-btn {
     color: #003366;
     border-radius: 5px;
     text-decoration: none;
+    transition: linear 0.20s;
+}
+
+nav .join-btn:hover {
+    background-color: #00BFAE;
+    transition: linear 0.20s;
 }
 
 /* Search Banner */

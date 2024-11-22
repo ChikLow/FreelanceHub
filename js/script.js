@@ -1,46 +1,63 @@
-// Завантажуємо дані користувачів з localStorage або ініціалізуємо порожній об'єкт, якщо вони відсутні
-let userData = JSON.parse(localStorage.getItem('userData')) || { users: [] };
+// Функція для отримання збережених акаунтів
+function getAccounts() {
+    const accounts = localStorage.getItem('accounts');
+    return accounts ? JSON.parse(accounts) : [];
+}
 
-// Обробник події для реєстрації
-document.getElementById('registerForm')?.addEventListener('submit', function(event) {
-    event.preventDefault(); // Запобігаємо перезавантаженню сторінки при відправці форми
+// Функція для збереження акаунтів
+function saveAccounts(accounts) {
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+}
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+// Реєстрація нового акаунта
+document.getElementById('registerForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    // Перевірка, чи існує вже користувач з таким ім'ям
-    const userExists = userData.users.some(user => user.username === username);
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-    if (userExists) {
-        alert('Username already exists!'); // Якщо користувач з таким ім'ям уже існує
-        return; // Зупиняємо виконання функції
+    if (!username || !password) {
+        alert('Username and password are required!');
+        return;
     }
 
-    // Додаємо нового користувача до масиву
-    userData.users.push({ username, password });
+    const accounts = getAccounts();
 
-    // Оновлюємо дані в localStorage
-    localStorage.setItem('userData', JSON.stringify(userData));
+    // Перевірка на існування користувача
+    if (accounts.some(account => account.username === username)) {
+        alert('Username already exists!');
+        return;
+    }
 
-    alert('Registration successful!'); // Повідомлення про успішну реєстрацію
-    console.log(userData);  // Логуємо оновлені дані для перевірки
+    // Додавання нового користувача
+    accounts.push({ username, password });
+    saveAccounts(accounts);
+
+    alert('Account registered successfully!');
+    window.location.href = 'log_in.html';
 });
 
-// Обробник події для логіну
-document.getElementById('loginForm')?.addEventListener('submit', function(event) {
-    event.preventDefault(); // Запобігаємо перезавантаженню сторінки при відправці форми
+// Авторизація користувача
+document.getElementById('loginForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    const username = document.getElementById('loginUsername').value;
-    const password = document.getElementById('loginPassword').value;
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-    // Перевірка, чи існує користувач з таким ім'ям і паролем
-    const user = userData.users.find(user => user.username === username && user.password === password);
+    if (!username || !password) {
+        alert('Username and password are required!');
+        return;
+    }
+
+    const accounts = getAccounts();
+
+    // Перевірка на відповідність даних
+    const user = accounts.find(account => account.username === username && account.password === password);
 
     if (user) {
-        alert('Login successful!'); // Якщо логін успішний
-        console.log('Logged in user:', user);  // Логуємо користувача
-        // Перенаправлення або додаткові дії після успішного входу
+        alert('Login successful!');
+        window.location.href = 'index.html'; // Перенаправлення на головну сторінку
     } else {
-        alert('Invalid username or password!'); // Якщо логін або пароль невірні
+        alert('Invalid username or password!');
     }
 });
