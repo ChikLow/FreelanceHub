@@ -50,10 +50,6 @@
                             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -61,14 +57,14 @@
 
     <!-- Search Section -->
     <section class="search-banner">
-        <form class="d-flex" role="search">
+        <form id="searchForm" class="d-flex" role="search">
             <input id="search-search-banner" class="form-control me-2" type="search" placeholder="Search..."
                 aria-label="Search">
             <button class="btn btn-success" type="submit">Search</button>
         </form>
     </section>
 
-    <main class="container">
+    <main class="container py-4">
         
         <div class="row">
             <div class="col-12 col-md-6 col-xl-5">
@@ -105,30 +101,16 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-outline-dark btn-lg my-3">accept</button>
+                      <a type="submit" href="order_success.html" class="btn btn-outline-dark btn-lg my-3">accept</a>
                 </form>
 
             </div>
             <div class="col-12 col-md-6 col-xl-7">
-                <div class="cart-list"></div>
+                <div class="cart_list"></div>
             </div>
         </div>
 
     </main>
-    <button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M4 7l16 0" />
-            <path d="M10 11l0 6" />
-            <path d="M14 11l0 6" />
-            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
-        </svg>
-    </button>
-    <a class='btn btn-outline-dark' href="make_order.html"></a>
-    </div>
 
     <!-- Footer -->
     <footer>

@@ -45,10 +45,6 @@
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -56,19 +52,18 @@
 
     <!-- Search Section -->
     <section class="search-banner">
-      <form class="d-flex" role="search">
+      <form id="searchForm" class="d-flex" role="search">
         <input id="search-search-banner" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </section>
 
-    <main>
+    <main class="container">
         <div class="cart_list"></div>
 
-        <div class="cart-buttons">
+        <div class="cart-buttons d-none">
 
-        </main>
-        <button>
+        <button class="btn btn-outline-dark my-3 cart-clean">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
@@ -80,9 +75,10 @@
                 <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
             </svg>
         </button>
-        <a class='btn btn-outline-dark cart-clean' href="make_order.html"></a>
+        <a class='btn btn-outline-dark my-3' href="make_order.html">Оформити Замовлення</a>
         </div>
 
+    </main>
     <!-- Footer -->
     <footer>
         <div class="footer-links">

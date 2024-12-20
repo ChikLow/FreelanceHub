@@ -110,6 +110,7 @@ getProducts().then(function (products) {
 
 //comment
 
+let cart_buttons = document.querySelector(".cart-buttons")
 let cart_list = document.querySelector(".cart_list")
 
 function getCartItem(product) {
@@ -127,7 +128,6 @@ function getCartItem(product) {
     `
 }
 
-cart_list.innerHTML = ""
 
 if (cart_list) {
   cart_list.innerHTML = ''
@@ -136,20 +136,45 @@ if (cart_list) {
     cart_list.innerHTML += getCartItem(cart.items[key])
   }
 
-  if (cart.items.length > 0) {
-    cart.list.innerHTML += ''
+  if (Object.keys(cart.items).length > 0) {
+    cart_buttons.classList.remove("d-none")
+
+  } else {
+    cart_list.innerHTML = "No orders!"
+    cart_buttons.classList.add("d-none")
   }
 
-}
-
-if (Object.keys(cart.items).length > 0) {
-  cart_buttons.classList.remove("d-none")
 }
 
 let cartCleanBtn = document.querySelector(".cart-clean")
 
 cartCleanBtn?.addEventListener("click", function (event) {
   document.cookie = `cart=''; max-age=0; path=/`;
-  cart_list.innerHTML = "no orders"
-  cart_buttons.classList.remove("d-none")
+  cart_list.innerHTML = "No orders!"
+  cart_buttons.classList.add("d-none")
 })
+
+function searchProducts(event) {
+  event.preventDefault(); // Запобігає перезавантаженню сторінки при відправці форми
+
+  let query = document.querySelector('#searchForm input').value.toLowerCase();
+  let productsList = document.querySelector('.product-list');
+  productsList.innerHTML = ''; // Очищуємо список товарів
+
+  getProducts().then(function (products) {
+    if (product_list) {
+      products.forEach(function (product) {
+        if (product.title.toLowerCase().includes(query) ||
+        product.description.toLowerCase().includes(query)) {
+        product_list.innerHTML += getCard(product);}
+      })
+      let addBtn_list = document.querySelectorAll(".add-cart-btn")
+      addBtn_list.forEach(function (btn) {
+        btn.addEventListener("click", addToCart);
+      })
+    }
+  })
+}
+
+let searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", searchProducts);
