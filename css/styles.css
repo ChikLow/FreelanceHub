@@ -202,6 +202,15 @@ footer p {
 .product-list{
     display: flex;
     flex-wrap:wrap;
-    gap:20px;
+    flex-direction: column;
+    align-items: center;  
+    gap:50px;
     justify-content: center;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+#cart-button{
+    border:1px solid black;
+    padding-left: 10px;
 }
