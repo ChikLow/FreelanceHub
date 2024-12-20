@@ -46,7 +46,7 @@ function getCard(product) {
   <!-- Bottom Section: Button -->
   <div class="d-flex justify-content-center mt-3">
     <button class="btn btn-primary add-cart-btn" style="width: 45%; height: 55px;" data-product='${JSON.stringify(product)}'>
-      Go somewhere
+      Add To Cart
     </button>
   </div>
 </div>
@@ -120,8 +120,8 @@ function getCartItem(product) {
                     <img src="${product.img}" class="img-fluid">
                 </div>
                 <div class="col-6"><h5>${product.title}</h5></div>
-                <div class="col-2">${product.quantity}</div>
-                <div class="col-2"><h4>${product.price}$</h4></div>
+                <div class="col-2"><h5>quantity:${product.quantity}</h5></div>
+                <div class="col-2"><h3>${product.price}$</h3></div>
             </div>
         </div>
     `

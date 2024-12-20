@@ -53,55 +53,20 @@
         "title": "WordPress Theme Customization",
         "description": "Customize an existing WordPress theme to match my business branding.",
         "price": "120",
-        "img": "assets/img/"
+        "img": "assets/img/wordpress.png"
     },
     {
         "id": 9,
         "title": "Photo Editing",
         "description": "Edit and enhance 50 product photos for an online store.",
         "price": "90",
-        "img": "assets/img/"
+        "img": "assets/img/photo_editing.png"
     },
     {
         "id": 10,
         "title": "Translation",
         "description": "Translate a 10-page document from English to Spanish.",
         "price": "70",
-        "img": "assets/img/"
-    },
-    {
-        "id": 11,
-        "title": "Video Editing",
-        "description": "Edit a 5-minute promotional video for a new product launch.",
-        "price": "200",
-        "img": "assets/img/"
-    },
-    {
-        "id": 12,
-        "title": "Illustration",
-        "description": "Create a detailed illustration for a children's book.",
-        "price": "150",
-        "img": "assets/img/"
-    },
-    {
-        "id": 13,
-        "title": "Database Setup",
-        "description": "Set up a MySQL database for a small business inventory system.",
-        "price": "130",
-        "img": "assets/img/"
-    },
-    {
-        "id": 14,
-        "title": "Game Development",
-        "description": "Develop a simple 2D game for mobile platforms.",
-        "price": "400",
-        "img": "assets/img/"
-    },
-    {
-        "id": 15,
-        "title": "Digital Marketing",
-        "description": "Run a month-long digital marketing campaign for an online clothing store.",
-        "price": "350",
-        "img": "assets/img/"
+        "img": "assets/img/translation.png"
     }
 ]
