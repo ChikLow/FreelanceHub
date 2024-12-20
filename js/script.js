@@ -30,15 +30,26 @@ let product_list = document.querySelector(".product-list")
 
 function getCard(product) {
   return `
-    <div class="card" style="width: 95%;">
-                <img src="${product.img}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">${product.title}</h5>
-                  <p class="card-text">price:${product.price}</p>
-                  <p class="card-text">${product.description}</p>
-                  <button class="btn btn-primary add-cart-btn" data-product='${JSON.stringify(product)}'>Go somewhere</button>
-                </div>
-              </div>
+    <div class="card" style="width: 45%; padding: 10px; border: 1px solid #ccc;">
+  <div class="row g-0">
+    <!-- Left Section: Image and Title -->
+    <div class="col-md-6 d-flex flex-column align-items-start">
+      <img style="width:400px;border:1px solid grey;border-radius:10px" src="${product.img}" class="img-fluid mb-3" alt="...">
+      <h5 class="card-title">${product.title}</h5>
+    </div>
+    <!-- Right Section: Description and Price -->
+    <div class="col-md-6 d-flex flex-column align-items-end text-end">
+      <p class="card-text fw-bold">Price: ${product.price}$</p>
+      <p class="card-text">${product.description}</p>
+    </div>
+  </div>
+  <!-- Bottom Section: Button -->
+  <div class="d-flex justify-content-center mt-3">
+    <button class="btn btn-primary add-cart-btn" style="width: 45%; height: 55px;" data-product='${JSON.stringify(product)}'>
+      Go somewhere
+    </button>
+  </div>
+</div>
     `
 }
 
@@ -86,14 +97,15 @@ function addToCart(event) {
 }
 
 getProducts().then(function (products) {
-  if (product_list){
-  products.forEach(function (product) {
-    product_list.innerHTML += getCard(product);
-  })
-  let addBtn_list = document.querySelectorAll(".add-cart-btn")
-  addBtn_list.forEach(function (btn) {
-    btn.addEventListener("click", addToCart);
-  })}
+  if (product_list) {
+    products.forEach(function (product) {
+      product_list.innerHTML += getCard(product);
+    })
+    let addBtn_list = document.querySelectorAll(".add-cart-btn")
+    addBtn_list.forEach(function (btn) {
+      btn.addEventListener("click", addToCart);
+    })
+  }
 })
 
 //comment
@@ -109,7 +121,7 @@ function getCartItem(product) {
                 </div>
                 <div class="col-6"><h5>${product.title}</h5></div>
                 <div class="col-2">${product.quantity}</div>
-                <div class="col-2"><h4>${product.price}</h4></div>
+                <div class="col-2"><h4>${product.price}$</h4></div>
             </div>
         </div>
     `
@@ -117,6 +129,27 @@ function getCartItem(product) {
 
 cart_list.innerHTML = ""
 
-for (let key in cart.items){
-  cart_list.innerHTML+= getCartItem(cart.items[key])
+if (cart_list) {
+  cart_list.innerHTML = ''
+
+  for (let key in cart.items) {
+    cart_list.innerHTML += getCartItem(cart.items[key])
+  }
+
+  if (cart.items.length > 0) {
+    cart.list.innerHTML += ''
+  }
+
 }
+
+if (Object.keys(cart.items).length > 0) {
+  cart_buttons.classList.remove("d-none")
+}
+
+let cartCleanBtn = document.querySelector(".cart-clean")
+
+cartCleanBtn?.addEventListener("click", function (event) {
+  document.cookie = `cart=''; max-age=0; path=/`;
+  cart_list.innerHTML = "no orders"
+  cart_buttons.classList.remove("d-none")
+})

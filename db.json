@@ -1,16 +1,107 @@
 [
     {
         "id": 1,
-        "title": "",
-        "img": "assets/img/logo2.png",
-        "description": "",
-        "price": ""
+        "title": "Cars Website",
+        "description": "I need to create a new website with cars and information about cars. Make an order to contact me.",
+        "price": "111",
+        "img": "assets/img/car.png"
     },
     {
         "id": 2,
-        "title": "",
-        "img": "assets/img/logo2.png",
-        "description": "",
-        "price": ""
+        "title": "Logo Design",
+        "description": "Looking for a creative logo design for my startup. Contact me for more details.",
+        "price": "200",
+        "img": "assets/img/logo_design.png"
+    },
+    {
+        "id": 3,
+        "title": "Social Media Management",
+        "description": "Manage and create posts for Instagram and Facebook for a fashion brand.",
+        "price": "150",
+        "img": "assets/img/social_media_manangment.png"
+    },
+    {
+        "id": 4,
+        "title": "E-commerce Website",
+        "description": "Develop a Shopify-based e-commerce website for selling handmade products.",
+        "price": "300",
+        "img": "assets/img/E-commerce_website.png"
+    },
+    {
+        "id": 5,
+        "title": "Mobile App UI Design",
+        "description": "Design an intuitive and visually appealing UI for a fitness app.",
+        "price": "250",
+        "img": "assets/img/app_ui.png"
+    },
+    {
+        "id": 6,
+        "title": "SEO Optimization",
+        "description": "Optimize my website for search engines to improve traffic.",
+        "price": "180",
+        "img": "assets/img/Seo.png"
+    },
+    {
+        "id": 7,
+        "title": "Content Writing",
+        "description": "Write 10 blog articles on tech-related topics.",
+        "price": "100",
+        "img": "assets/img/content_writing.png"
+    },
+    {
+        "id": 8,
+        "title": "WordPress Theme Customization",
+        "description": "Customize an existing WordPress theme to match my business branding.",
+        "price": "120",
+        "img": "assets/img/"
+    },
+    {
+        "id": 9,
+        "title": "Photo Editing",
+        "description": "Edit and enhance 50 product photos for an online store.",
+        "price": "90",
+        "img": "assets/img/"
+    },
+    {
+        "id": 10,
+        "title": "Translation",
+        "description": "Translate a 10-page document from English to Spanish.",
+        "price": "70",
+        "img": "assets/img/"
+    },
+    {
+        "id": 11,
+        "title": "Video Editing",
+        "description": "Edit a 5-minute promotional video for a new product launch.",
+        "price": "200",
+        "img": "assets/img/"
+    },
+    {
+        "id": 12,
+        "title": "Illustration",
+        "description": "Create a detailed illustration for a children's book.",
+        "price": "150",
+        "img": "assets/img/"
+    },
+    {
+        "id": 13,
+        "title": "Database Setup",
+        "description": "Set up a MySQL database for a small business inventory system.",
+        "price": "130",
+        "img": "assets/img/"
+    },
+    {
+        "id": 14,
+        "title": "Game Development",
+        "description": "Develop a simple 2D game for mobile platforms.",
+        "price": "400",
+        "img": "assets/img/"
+    },
+    {
+        "id": 15,
+        "title": "Digital Marketing",
+        "description": "Run a month-long digital marketing campaign for an online clothing store.",
+        "price": "350",
+        "img": "assets/img/"
     }
 ]
