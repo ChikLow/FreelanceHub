@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');
+
 /* General Reset */
 * {
     margin: 0;
@@ -6,13 +7,17 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;  /* Це потрібно, щоб встановити мінімальну висоту для всього документа */
-    margin: 0;  /* Важливо, щоб не було відступів */
+html,
+body {
+    height: 100%;
+    /* Це потрібно, щоб встановити мінімальну висоту для всього документа */
+    margin: 0;
+    /* Важливо, щоб не було відступів */
 }
 
 main {
-    flex-grow: 1;  /* Це дозволить вмісту займати весь доступний простір */
+    flex-grow: 1;
+    /* Це дозволить вмісту займати весь доступний простір */
 }
 
 body {
@@ -39,31 +44,38 @@ header {
 }
 
 .header-buttons {
-    font-weight:500;
-    position: absolute; /* Detach from the natural flow */
-    left: 50%; /* Move to the horizontal center of the header */
-    transform: translateX(-50%); /* Adjust position to align the center */
+    font-weight: 500;
+    position: absolute;
+    /* Detach from the natural flow */
+    left: 50%;
+    /* Move to the horizontal center of the header */
+    transform: translateX(-50%);
+    /* Adjust position to align the center */
 }
 
-.three-header-btns a{
-    color:rgb(51, 51, 51);
+.three-header-btns a {
+    color: rgb(51, 51, 51);
     transition: linear 0.15s;
 }
-.three-header-btns a:hover{
-    color:#00BFAE;
+
+.three-header-btns a:hover {
+    color: #00BFAE;
     transition: linear 0.15s;
 }
 
 nav {
-    flex-grow: 1; /* Allow the nav to take up remaining space */
+    flex-grow: 1;
+    /* Allow the nav to take up remaining space */
     display: flex;
-    justify-content: center; /* Center the nav links */
+    justify-content: center;
+    /* Center the nav links */
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 40px; /* Increase space between the items */
+    gap: 40px;
+    /* Increase space between the items */
     margin: 0;
     padding: 0;
 }
@@ -95,14 +107,17 @@ nav .join-btn:hover {
 
 /* Search Banner */
 .search-banner {
-    margin-top:50px;
+    margin-top: 50px;
     background-color: #00c2a8;
     padding: 40px 20px;
     text-align: center;
-    height:20%;
-    display: flex; /* Enables Flexbox layout */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
+    height: 20%;
+    display: flex;
+    /* Enables Flexbox layout */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
     text-align: center;
 }
 
@@ -132,7 +147,7 @@ nav .join-btn:hover {
 
 /* Popular Services */
 .popular-services {
-    margin-top:150px;
+    margin-top: 150px;
     padding: 20px;
     text-align: center;
 }
@@ -146,23 +161,27 @@ nav .join-btn:hover {
     transform: translateX(-20px);
     width: 100vw;
     background-color: #00c2a8;
-    display:flex;
+    display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    padding:40px; 
+    padding: 40px;
 }
 
 .service-card {
     background-color: #003d80;
     color: white;
-    padding: 30px 20px; /* Можна збільшити паддінги для збільшення висоти */
+    padding: 30px 20px;
+    /* Можна збільшити паддінги для збільшення висоти */
     border-radius: 10px;
-    width: 150px; /* Можна вказати фіксовану ширину */
-    height: 300px;  /* Фіксована висота картки */
+    width: 150px;
+    /* Можна вказати фіксовану ширину */
+    height: 300px;
+    /* Фіксована висота картки */
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Центрування вмісту по вертикалі */
+    justify-content: center;
+    /* Центрування вмісту по вертикалі */
     margin: 10px;
 }
 
@@ -193,24 +212,91 @@ footer p {
 }
 
 .logo img {
-    height: 50px; /* Adjust the size of your logo */
+    height: 50px;
+    /* Adjust the size of your logo */
     width: auto;
 }
 
 /*register styles*/
 
-.product-list{
+.product-list {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;  
-    gap:50px;
+    align-items: center;
+    gap: 50px;
     justify-content: center;
-    margin-top:100px;
-    margin-bottom:100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-#cart-button{
-    border:1px solid black;
+#cart-button {
+    border: 1px solid black;
     padding-left: 10px;
+}
+
+.confirmation-container {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+    width: 65%;
+}
+
+.confirmation-container h1 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.confirmation-container p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.order-details strong {
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button-container a:hover {
+    background-color: #218838;
+}
+
+.order-success-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

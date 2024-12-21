@@ -165,8 +165,9 @@ function searchProducts(event) {
     if (product_list) {
       products.forEach(function (product) {
         if (product.title.toLowerCase().includes(query) ||
-        product.description.toLowerCase().includes(query)) {
-        product_list.innerHTML += getCard(product);}
+          product.description.toLowerCase().includes(query)) {
+          product_list.innerHTML += getCard(product);
+        }
       })
       let addBtn_list = document.querySelectorAll(".add-cart-btn")
       addBtn_list.forEach(function (btn) {

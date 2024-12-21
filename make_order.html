@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreelanceHub</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/img/Logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -15,7 +16,8 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="assets/img/Logo.svg" alt="Logo" style="width:50px"></a>
+                <a style="margin-left: 20px;" class="navbar-brand" href="index.html"><img src="assets/img/Logo.svg"
+                        alt="Logo" style="width:50px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -24,31 +26,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Мої замовлення</a>
+                            <a class="nav-link" href="orders_cart.html">Orders Cart</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
+                    </ul>
+                    <ul>
+                        <a style="margin-right: 20px;" class="btn btn-light" href="orders_cart.html" id="cart-button"
+                            type="submit"><img src="assets/img/cart.svg" alt="cart"></a>
                     </ul>
                 </div>
             </div>
@@ -65,43 +51,44 @@
     </section>
 
     <main class="container py-4">
-        
+
         <div class="row">
             <div class="col-12 col-md-6 col-xl-5">
                 <form action="" method="post">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">your name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <label for="exampleFormControlInput1" class="form-label">Введіть ваше ім'я та прізвище</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ПІБ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Номер телефону</label>
+                        <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="380">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Електронна адреса</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Введіть Платіжні Данні</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Номер Картки (1234 5678 9012 3456)">
+                        <input style="margin-top:20px;margin-bottom:20px" class="form-control" type="text"
+                            placeholder="Закінчення Дії Картки (01/2031)" aria-label="default input example">
+                        <input class="form-control form-control-sm" type="text" placeholder="CVV-Код (001)"
+                            aria-label=".form-control-sm example">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Коментар до замовлення</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">telephone</label>
-                        <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">address</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                      <a type="submit" href="order_success.html" class="btn btn-outline-dark btn-lg my-3">accept</a>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Не передзвонювати
+                        </label>
+                    </div>
+                    <a type="submit" href="order_success.html" class="btn btn-outline-dark btn-lg my-3">accept</a>
                 </form>
 
             </div>
